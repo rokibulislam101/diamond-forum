@@ -12,16 +12,71 @@
 
 <body class="my-0 ">
   <!-- Header Section -->
-  <header class=""></header>
+  <header class="mx-auto md:mx-16">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
+            style="width: 20em;">
+            <a class="btn btn-ghost text-3xl font-bold">PeTro</a>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-3xl font-bold hidden lg:flex bg-none mt-5">PeTro</a>
+      </div>
+      <div class="navbar-center justify-end hidden lg:flex mt-5">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+        </ul>
+      </div>
+      <div class="navbar-end mt-5">
+        <button class="btn border rounded-full w-28 bg-indigo-400 text-white">Sign In</button>
+      </div>
+    </div>
+  </header>
 
   <!-- Main Section -->
-  <main>
-    <!-- Card Section -->
-    <section>
+  <main class="mx-auto md:mx-16">
+    <!-- Discuss Section -->
+    <section class="my-5">
       <div>
-        <h1 class="">Latest Posts</h1>
-        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="cards"></div>
+        <h1 class="text-4xl font-bold text-center">Let’s Discuss</h1>
+        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        
+      </div>
+    </section>
+
+    <!-- Card Section -->
+    <section class="my-5">
+      <div>
+        <h1 class="text-4xl font-bold text-center">Latest Posts</h1>
+        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The
+          integrated testing features allow for a streamlined .</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-5 " id="cards"></div>
       </div>
     </section>
   </main>
