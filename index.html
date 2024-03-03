@@ -25,32 +25,20 @@
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             style="width: 20em;">
             <a class="btn btn-ghost text-3xl font-bold">PeTro</a>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
-                data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
-                data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
-                data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
-                data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
           </ul>
         </div>
         <a class="btn btn-ghost text-3xl font-bold hidden lg:flex bg-none mt-5">PeTro</a>
       </div>
       <div class="navbar-center justify-end hidden lg:flex mt-5">
         <ul class="menu menu-horizontal px-1">
-          <li><a href="#"
-              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
-              data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
-          <li><a href="#"
-              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
-              data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
-          <li><a href="#"
-              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
-              data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
-          <li><a href="#"
-              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
-              data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
         </ul>
       </div>
       <div class="navbar-end mt-5">
@@ -65,8 +53,27 @@
     <section class="my-5">
       <div>
         <h1 class="text-4xl font-bold text-center">Let’s Discuss</h1>
-        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-        
+        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Left Site -->
+        <div id="posts"></div>
+
+        <!-- Right Site -->
+        <div class="bg-neutral-100 m-5 p-5 rounded-2xl">
+          <div class="flex justify-between mb-5 gap-32">
+            <h2 class="text-xl font-bold">Title</h2>
+            <div class="flex align-center items-center gap-3">
+              <img src="/images/double-tick.png" alt="tick" class="w-5 h-4"></i>Mark as read <span>(4)</span>
+            </div>
+          </div>
+          <div class="flex bg-white justify-between p-5 rounded-2xl my-3">
+            <h2 class="font-bold">10 Kids Unaware of Their Halloween Costume</h2>
+            <p class="flex gap-3 items-center"><i class="fa-regular fa-eye"></i>1,588</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -74,7 +81,8 @@
     <section class="my-5">
       <div>
         <h1 class="text-4xl font-bold text-center">Latest Posts</h1>
-        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The
+        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app.
+          The
           integrated testing features allow for a streamlined .</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-5 " id="cards"></div>
       </div>
