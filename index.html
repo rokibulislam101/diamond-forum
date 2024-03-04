@@ -25,35 +25,48 @@
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
             style="width: 20em;">
             <a class="btn btn-ghost text-3xl font-bold">PeTro</a>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
-            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center" data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+            <li><a href="#" class="tooltip my-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex items-center"
+                data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
           </ul>
         </div>
         <a class="btn btn-ghost text-3xl font-bold hidden lg:flex bg-none mt-5">PeTro</a>
       </div>
       <div class="navbar-center justify-end hidden lg:flex mt-5">
         <ul class="menu menu-horizontal px-1">
-          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
-          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
-          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
-          <li><a href="#" class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center" data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+          <li><a href="#"
+              class="tooltip mx-2 border border-[rgba(3,7,18,0.10)] btn btn-circle flex justify-center items-center"
+              data-tip="Flag"><i class="fa-solid fa-flag"></i></a></li>
         </ul>
       </div>
       <div class="navbar-end mt-5">
-        <button class="btn border rounded-full w-28 bg-indigo-400 text-white">Sign In</button>
+        <button class="btn bg-indigo-400 text-white border w-28 rounded-full">Sign In</button>
       </div>
     </div>
   </header>
 
   <!-- Main Section -->
-  <main class="mx-auto md:mx-16">
+  <main class="mx-auto md:mx-14">
     <!-- Discuss Section -->
     <section class="my-5">
       <div>
         <h1 class="text-4xl font-bold text-center">Let’s Discuss</h1>
-        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+        <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app.
+          The integrated testing features allow for a streamlined.</p>
       </div>
 
       <div class="flex flex-col lg:flex-row gap-10">
@@ -63,17 +76,29 @@
 
         <!-- Right Site -->
         <div class="bg-neutral-100 m-5 p-5 rounded-2xl">
-          <div class="flex justify-between mb-5 gap-32">
+          <div class="flex justify-between mb-5 gap-52">
             <h2 class="text-xl font-bold">Title</h2>
             <div class="flex align-center items-center gap-3">
-              <img src="/images/double-tick.png" alt="tick" class="w-5 h-4"></i>Mark as read <span>(4)</span>
+              <img src="/images/double-tick.png" alt="tick" class="w-5 h-4"></i>Mark as read <span
+                id="read-count">(0)</span>
             </div>
           </div>
-          <div class="flex bg-white justify-between p-5 rounded-2xl my-3">
-            <h2 class="font-bold">10 Kids Unaware of Their Halloween Costume</h2>
-            <p class="flex gap-3 items-center"><i class="fa-regular fa-eye"></i>1,588</p>
-          </div>
+          <!-- <div class="flex bg-white justify-between p-5 rounded-2xl my-3"> -->
+          <div id="additional-info" style="display: none;"></div>
         </div>
+      </div>
+    </section>
+
+    <!-- Forum Section -->
+    <section class="my-14">
+      <div class="flex flex-col lg:flex-row gap-10 bg-indigo-950 justify-between items-center rounded-2xl m-5 p-5">
+        <div class="px-16 md:px-32">
+          <h1 class="text-4xl font-bold text-white">Join Our Forum</h1>
+          <p class="text-gray-300 py-5">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run
+            unittests and view the results directly within the app.</p>
+          <button class="btn bg-indigo-400 text-white border-0 rounded-full">Registered Now</button>
+        </div>
+        <img src="/images/joinforum.png" alt="img">
       </div>
     </section>
 
@@ -82,15 +107,27 @@
       <div>
         <h1 class="text-4xl font-bold text-center">Latest Posts</h1>
         <p class="text-center lg:mx-72 py-5">Yes, you can run unit tests and view the results directly within the app.
-          The
-          integrated testing features allow for a streamlined .</p>
+          The integrated testing features allow for a streamlined .</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-5 " id="cards"></div>
       </div>
     </section>
   </main>
 
   <!-- Footer Section -->
-  <footer></footer>
+  <footer>
+    <div class="bg-zinc-100 p-5">
+      <h1 class="text-4xl font-bold text-center mt-5">PeTro</h1>
+      <p class="text-center lg:mx-72 py-5">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+      <div class="flex justify-center gap-5">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <hr class="border-dashed my-5">
+      <p class="text-center pb-5">2024, All Rights Reserved.</p>
+    </div>
+  </footer>
 
   <script src="./js/ticket.js"></script>
   <script src="https://kit.fontawesome.com/98a71671f7.js" crossorigin="anonymous"></script>
