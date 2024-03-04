@@ -8,9 +8,7 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     postsData.posts.map(post => {
       postsHTML += `<div class="flex bg-neutral-100 m-5 p-5 rounded-2xl gap-5">
           <div class="relative">
-            <img src="${
-              post.image
-            }" alt="img" class="profile-img w-20 rounded-3xl" />
+            <img src="${post.image}" alt="img" class="profile-img w-20 rounded-3xl" />
             ${
               post.isActive
                 ? '<div class="absolute top-0 right-0 w-4 h-4 bg-green-500 rounded-full"></div>'
@@ -22,18 +20,14 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
               <p>#${post.category}</p>
               <p>Author: ${post.author.name || 'Unknown'}</p>
             </div>
-            <h2 class="font-bold py-2">${post.title}</h2>
+            <h3 class="font-bold py-2">${post.title}</h3>
             <p class="py-2">${post.description}</p>
             <hr class="border-dashed">
             <div class="flex justify-between items-center">
               <div class="flex gap-5">
-                <p><i class="fa-regular fa-message me-3"></i>${
-                  post.comment_count
-                }</p>
+                <p><i class="fa-regular fa-message me-3"></i>${post.comment_count}</p>
                 <p><i class="fa-regular fa-eye me-3"></i>${post.view_count}</p>
-                <p><i class="fa-regular fa-clock me-3"></i>${
-                  post.posted_time
-                } min</p>
+                <p><i class="fa-regular fa-clock me-3"></i>${post.posted_time} min</p>
               </div>
               <button class="show-btn btn bg-green-400 text-white p-2 btn-circle flex justify-center items-center rounded-full" id="addButton"><i class="fa-regular fa-envelope-open"></i></button>
             </div>
@@ -42,55 +36,39 @@ fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     });
     document.getElementById('posts').innerHTML = postsHTML;
 
-    // Add event listener after setting the innerHTML
-    addEventListenersToButtons();
+    addEventListenersToButtons(postsData);
   })
   .catch(err => {
     console.log(err);
   });
 
-function addEventListenersToButtons() {
+function addEventListenersToButtons(postsData) {
   const allBtn = document.getElementsByClassName('show-btn');
   let count = 0;
+
   for (const btn of allBtn) {
-    btn.addEventListener('click', function (e) {
+    btn.addEventListener('click', function () {
       count = count + 1;
       document.getElementById('read-count').innerText = `(${count})`;
+
+      const index = Array.from(allBtn).indexOf(btn);
+
+      const post = postsData.posts[index];
+
+      const newDiv = document.createElement('div');
+      newDiv.className = 'flex justify-between bg-white rounded-2xl p-5 mt-3';
+      newDiv.innerHTML = `
+        <h3 class="font-bold">${post.title}</h3>
+        <p><i class="fa-regular fa-eye me-3"></i>${post.view_count}</p>
+      `;
+
+      const additionalInfoDiv = document.getElementById('additional-info');
+      additionalInfoDiv.appendChild(newDiv);
+
+      additionalInfoDiv.style.display = 'block';
     });
   }
 }
-
-
-
-
-
-
-
-// // Additional-Info Function Section--
-// document.getElementById('addButton').addEventListener('click', () => {
-//   fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
-//     .then(response => {
-//       return response.json();
-//     })
-//     .then(postsData => {
-//       let postsHTML = '';
-//       postsData.posts.map(post => {
-//         postsHTML += `<div class="flex bg-white justify-between p-5 rounded-2xl my-3">
-//                 <h2 class="font-bold py-2">${post.title}</h2>
-//                 <p><i class="fa-regular fa-eye me-3"></i>${post.view_count}</p>
-//               </div>`;
-//       });
-//       document.getElementById('additional-info').innerHTML = postsHTML;
-//       document.getElementById('additional-info').style.display = 'block';
-//     })
-//     .catch(error => {
-//       console.log(error);
-//     });
-// });
-
-
-
-
 
 
 // Card Function Section--
